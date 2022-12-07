@@ -1,0 +1,17 @@
+//@version=4
+strategy("DOGE SMA", overlay=true, initial_capital=25, default_qty_type=strategy.percent_of_equity, default_qty_value = 100)
+
+fast_ma_period = input(title="Fast MA", type=input.integer, defval=5)
+slow_ma_period = input(title="Slow MA", type=input.integer, defval=15)
+fast_ma = sma(close, fast_ma_period)
+slow_ma = sma(close, slow_ma_period)
+
+plot(fast_ma, color=color.green, linewidth=1)
+plot(slow_ma,color=color.yellow, linewidth=3)
+
+buy_condition = crossover(fast_ma, slow_ma)
+sell_condition = crossunder(fast_ma, slow_ma)
+
+
+strategy.entry("doge door", strategy.long, 10000, when=buy_condition)
+strategy.close("doge door", when=sell_condition)
