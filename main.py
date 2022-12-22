@@ -5,7 +5,7 @@ from binance.enums import *
 
 app = Flask(__name__)
 
-client = Client(config.API_KEY, config.API_SECRET, tld='us')
+
 
 def order(side, quantity, symbol,order_type=ORDER_TYPE_MARKET):
     try:
@@ -54,3 +54,8 @@ def webhook():
             "code": "error",
             "message": "order failed"
         }
+
+
+if __name__ == '__main__':
+    client = Client(config.API_KEY, config.API_SECRET, tld='us')
+    app.run(host='127.0.0.1', port=8888, debug=False)
