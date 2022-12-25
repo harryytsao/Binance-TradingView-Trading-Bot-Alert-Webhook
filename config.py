@@ -1,3 +1,3 @@
 WEBHOOK_PASSPHRASE = 'abc123'
-API_KEY = 'your_api_key'
-API_SECRET = 'your_api_secret'
+API_KEY = 'Fj4nrqqvyqeFBXk4dhxDNdjbelHRbPcoxBLiWilnjz2CG2mPpDzmJ1jRjgKSeH6S'
+API_SECRET = 'z1fm8uLOQomOqX3CDSyUmqIEhnM1FPqWWQHbcwVev8epED52bSLNGeoUMQrZhQDB'
